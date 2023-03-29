@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'product',
     'rest_framework',
     'debug_toolbar',
+    'rest_framework.authtoken',
 
 ]
 
@@ -141,5 +142,10 @@ INTERNAL_IPS = [
 REST_FRAMEWORK = {
     # Pagination
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 2
+    'PAGE_SIZE': 2,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+            'rest_framework.authentication.BasicAuthentication',
+            'rest_framework.authentication.SessionAuthentication',
+            'rest_framework.authentication.TokenAuthentication',
+        ],
 }
