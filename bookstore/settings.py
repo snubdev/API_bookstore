@@ -153,5 +153,3 @@ REST_FRAMEWORK = {
             'rest_framework.authentication.TokenAuthentication',
         ],
 }
-
-# DISABLE_COLLECTSTATIC = 0
